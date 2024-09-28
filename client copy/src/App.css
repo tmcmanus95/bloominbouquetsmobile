@@ -1,0 +1,143 @@
+#current-word-container {
+  color: white;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#title-display,
+#current-word-display {
+  margin: 0;
+  color: black;
+}
+#main-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 90%;
+  overflow: hidden;
+}
+
+#grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(8, 50px); */
+  grid-gap: 3px;
+  /* border: 5px solid black; */
+  width: 100%;
+  padding: 5px;
+  /* height: 500px; */
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+/* #current-word-display {
+  height: 40px;
+  overflow: hidden; */
+/* } */
+
+.grid-item.randomized.correct {
+  background-color: darkseagreen;
+}
+
+.correct {
+  padding: 5px;
+  border-radius: 3px;
+  border: darkseagreen solid 5px;
+}
+.incorrect {
+  padding: 5px;
+  background-color: indianred;
+  border-radius: 3px;
+}
+
+.incorrect {
+  padding: 5px;
+  background-color: indianred;
+  border-radius: 3px;
+}
+
+.grid-item.randomized {
+  background-color: palegoldenrod;
+}
+
+.incorrect {
+  background-color: indianred;
+}
+
+.grid-item {
+  /* width: calc(100% - 10px);*/
+  height: 36px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 1s ease-in-out, background-color 0.5s ease;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+.current-word-container {
+  display: flex;
+  height: 100px !important;
+  align-items: center;
+}
+
+/* .flip-animation {
+  transform: rotateX(360deg);
+} */
+
+#past-words-display-container {
+  margin-left: 20px;
+  overflow: auto;
+}
+.hidden {
+  color: white;
+}
+
+button {
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  #grid-container {
+    /* width: 75%; */
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .grid-item {
+    /* height: calc(100% - 10px); */
+    /* width: calc(100% - 10px); */
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #grid-container {
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 3px;
+  }
+  #main-container {
+    width: 90%;
+  }
+  .current-word-container {
+    display: flex;
+    height: 70px !important;
+  }
+
+  .grid-item {
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "quantity": 5000,
+    "price": 0.99
+  },
+  {
+    "quantity": 50000,
+    "price": 4.99
+  },
+  {
+    "quantity": 500000,
+    "price": 24.99
+  }
+]
